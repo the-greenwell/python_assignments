@@ -10,33 +10,27 @@ class User:
         dict = vars(self)
         for key in dict:
             print(f"{key}: {dict[key]}")
+        return self
     def enroll(self):
         if self.is_rewards_member:
             print("User already a member.")
-            return False
         else:
             self.is_rewards_member = True
             self.gold_card_points = 200
-            return True
+        return self
     def spend_points(self, amount):
         if self.gold_card_points >= amount:
             self.gold_card_points -= amount
         else:
             print('Insufficient Points.')
+        return self
 
 anthony = User('Anthony','Greenwell','ant@email', 28)
-anthony.enroll()
+anthony.enroll().spend_points(50).display_info()
 
 kaitlin = User('Kaitlin','Brooks','kait@email', 25)
 kristine = User('Kristine', 'Greenwell', 'kris@email', 69)
 
 anthony.spend_points(50)
-kaitlin.enroll()
-kaitlin.spend_points(80)
-
-anthony.display_info()
-kaitlin.display_info()
-kristine.display_info()
-
-anthony.enroll()
-kristine.spend_points(40)
+kaitlin.enroll().spend_points(80).display_info()
+kristine.display_info().spend_points(40)
