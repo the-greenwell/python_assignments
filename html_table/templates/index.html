@@ -1,0 +1,22 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<div class="container" style="padding: 0 15em">
+    <table class="table text-center">
+        <thead style="background-color: black; color: white;">
+            <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Full</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name in names%}
+                <tr>
+                    <td>{{name.first_name}}</td>
+                    <td>{{name.last_name}}</td>
+                    <td>{{name.first_name}} {{name.last_name}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
