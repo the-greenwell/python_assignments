@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey: Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <h1>Name: <small>{{form_data.ninja_name}}</small></h1>
+        <h3>Food Preferences: </h3>
+        <ul>
+            {% for food in food_data %}
+            <li>{{food}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Favorite Language: <small>{{form_data.pg_lang}}</small></h3>
+        <h3>Learning from: <small>{{form_data.location}}</small></h3>
+        <a href="/" class="btn btn-primary col-2">Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label for="ninja_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="ninja_name" name="ninja_name">
+            </div>
+            <p class="mb-0">Where do you learn from?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="location" id="virtual_check1" value="In Dojo">
+                <label class="form-check-label" for="virtual_check1">
+                    In Dojo
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="location" id="virtual_check2" value="Remote Learning" checked>
+                <label class="form-check-label" for="virtual_check2">
+                    Remote Learning
+                </label>
+            </div>
+            <p class="mt-3 mb-0">Food Preference</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="food_pref" value="Pizza">
+                <label class="form-check-label" for="inlineCheckbox1">Pizza</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="food_pref" value="Burgers">
+                <label class="form-check-label" for="inlineCheckbox2">Burgers</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="food_pref" value="Mexican Food">
+                <label class="form-check-label" for="inlineCheckbox2">Mexican Food</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="food_pref" value="Asian Food">
+                <label class="form-check-label" for="inlineCheckbox2">Asian Food</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="food_pref" value="Pasta">
+                <label class="form-check-label" for="inlineCheckbox2">Pasta</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="food_pref" value="Vegan" disabled>
+                <label class="form-check-label" for="inlineCheckbox3">Vegitarian/Vegan</label>
+            </div>
+        
+            <div class="mb-3 mt-3">
+                <select class="form-select" aria-label="Select favorite language" name="pg_lang">
+                    <option selected>Favorite Language</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
