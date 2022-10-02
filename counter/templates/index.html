@@ -1,0 +1,37 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="shortcut icon" href="#">
+
+        <div class="text-center container" style="display: flex; flex-direction:column; gap: 2em;">
+            <div class="row">
+                <h1>Counter</h1>
+            </div>
+            <div class="row"style='justify-content: center; padding: 0 26em;'>
+                <table class="table text-center">
+                    <thead style="background-color: grey; color: white;">
+                        <tr>
+                            <th scope="col">Visits</th>
+                            <th scope="col">Counter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>{{visits}}</td>
+                                <td>{{count}}</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" style="gap: 1em; justify-content: center;">
+                <a href="{{ url_for('counter') }}" class="btn btn-primary col-2">Increment by {{incremental}}</a>
+                <a href="{{ url_for('destroy_session') }}" class="btn btn-danger col-2">Reset</a>
+            </div>
+            <div class="row mt-3" style='justify-content: center; padding: 0 26em;'>
+                <form action="/" method="post">
+                    <div class="input-group mb-3 flex-nowrap">
+                        <button class="btn btn-primary" type="submit" id="button-addon1">Change incremental:</button>
+                        <input type="text" class="form-control" placeholder="Enter Value" aria-label="Increment by" aria-describedby="button-addon1" name="increment">
+                    </div>   
+                </form>   
+            </div>
+        </div>    
+
