@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Name: <small>{{form_data.ninja_name}}</small></h1>
+        <h1>Name: <small>{{session['form'].ninja_name}}</small></h1>
         <h3>Food Preferences: </h3>
         <ul>
-            {% for food in food_data %}
+            {% for food in session['food_pref'] %}
             <li>{{food}}</li>
             {% endfor %}
         </ul>
-        <h3>Favorite Language: <small>{{form_data.pg_lang}}</small></h3>
-        <h3>Learning from: <small>{{form_data.location}}</small></h3>
+        <h3>Favorite Language: <small>{{session['form'].pg_lang}}</small></h3>
+        <h3>Learning from: <small>{{session['form'].location}}</small></h3>
         <a href="/" class="btn btn-primary col-2">Home</a>
     </div>
 </body>
