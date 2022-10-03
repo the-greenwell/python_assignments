@@ -15,14 +15,14 @@
                     </thead>
                     <tbody>
                             <tr>
-                                <td>{{visits}}</td>
-                                <td>{{count}}</td>
+                                <td>{{session['visits']}}</td>
+                                <td>{{session['visits'] * session['increment']}}</td>
                             </tr>
                     </tbody>
                 </table>
             </div>
             <div class="row" style="gap: 1em; justify-content: center;">
-                <a href="{{ url_for('counter') }}" class="btn btn-primary col-2">Increment by {{incremental}}</a>
+                <a href="{{ url_for('counter') }}" class="btn btn-primary col-2">Increment by {{session['increment']}}</a>
                 <a href="{{ url_for('destroy_session') }}" class="btn btn-danger col-2">Reset</a>
             </div>
             <div class="row mt-3" style='justify-content: center; padding: 0 26em;'>
